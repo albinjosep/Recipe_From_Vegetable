@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_view_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="View Profile" />
+        <item
+            android:id="@+id/recipe"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Search Recipe" />
+        <item
+            android:id="@+id/rating"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Rating" />
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Feedback" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_faq"
+                android:icon="@drawable/ic_menu_share"
+                android:title="FAQ" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Contact Us" />
+        </menu>
+    </item>
+
+</menu>
