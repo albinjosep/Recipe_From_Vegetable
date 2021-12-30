@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="/manage_veg_edit1" method="post" enctype="multipart/form-data">
+<table class="table table-striped">
+
+      <input type="hidden" name="textfield" id="textfield" value="{{ data['VegID'] }}"/>
+
+  <tr>
+    <th width="111">VegName</th>
+    <td width="151"><label for="textfield" ></label>
+      <input type="text" name="textfield1" id="textfield1" value="{{ data['VegName'] }}" required="required"/></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5" required="required">{{ data['Description'] }}</textarea></td>
+  </tr>
+  <tr>
+  <th>category</th>
+  <td><label for="select"></label>
+    <select name="select" id="select">
+        <
+        <option {% if data['Category']=="Leafy" %} selected {% endif %}>Leafy</option>
+         <option {% if data['Category']=="Marrow" %} selected {% endif %}>Marrow</option>
+         <option {% if data['Category']=="Edible" %} selected {% endif %}>Edible</option>
+        <option {% if data['Category']=="Allium" %} selected {% endif %}>Allium</option>
+    </select></td>
+  <tr>
+  <tr>
+    <th>Image</th>
+    <td><label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField" /></td>
+  </tr>
+
+    <td colspan="2" align="center"><input type="submit" name="add" id="add" value="Update" class="btn btn-primary" /></td>
+    </tr>
+</table>
+
+</form>
+{% endblock %}

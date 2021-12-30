@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% block body %}
+<div align="center">
+  <form id="form1" name="form1" method="post" action="">
+  <table class="table table-striped">
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Date</th>
+    </tr>
+      {% for row in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ row['name'] }}</td>
+      <td>{{ row['rating'] }}</td>
+      <td>{{ row['date'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+
+</form>
+</div>
+{% endblock %}
+

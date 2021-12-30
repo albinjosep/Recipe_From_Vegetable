@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+{% block body %}
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="/manage_ingredients_view1">
+
+
+<table width="300" border="0" align="center">
+    <tr>
+    <td ><b>Recipe</b></td>
+    <td>
+        <select name="select1" id="select1">
+        <option>--select--</option>
+            {% for row1 in data %}
+            <option value="{{ row1['RecipeID'] }}"> {{ row1['RecipeName'] }} </option>
+            {% endfor %}
+        </select>
+    </td>
+    <td><input type="submit" value="Search"/></td>
+  </tr>
+</table>
+<br>
+<br>
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Vegetable Name</th>
+      <th>Quantity</th>
+      <th>&nbsp;</th>
+
+    </tr>
+      {% for row in data1 %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ row['VegName'] }}</td>
+      <td>{{ row['Quantity'] }}</td>
+        <td><a href="/manage_ingredients_edit?id={{ row['IngrID'] }}">Edit</a><br />
+            <a href="/manage_ingredients_delete?id={{ row['IngrID'] }}">Delete</a>
+        </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+[1213/113203.050:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113203.099:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113207.610:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113207.657:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113209.133:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113209.165:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113210.706:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)
+[1213/113210.745:ERROR:file_io_win.cc(243)] SetEndOfFile: The file or directory is corrupted and unreadable. (0x570)

@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="/manage_recipe_edit1" method="post" enctype="multipart/form-data">
+<table class="table table-striped">
+
+    <input type="hidden" name="textfield" id="textfield" value="{{ data['RecipeID'] }}">
+
+  <tr>
+    <th width="111">Recipe Name</th>
+    <td width="151"><input type="text" name="textfield1" id="textfield1" value="{{ data['RecipeName'] }}" required="required"></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+      <td><textarea name="textarea" id="textarea" required="required">{{ data['Description'] }} </textarea></td>
+  </tr>
+  <tr>
+    <th>Image</th>
+    <td><input type="file" name="filefield1" id="filefield1" ></td></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" name="add" id="add" value="Update" /></td>
+    </tr>
+</table>
+
+</form>
+{% endblock %}

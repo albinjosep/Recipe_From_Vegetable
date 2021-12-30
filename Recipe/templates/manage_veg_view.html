@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="" method="post">
+<table width="900">
+  <tr>
+    <td align="center"><b>#</b> &nbsp;&nbsp;&nbsp;</td>
+    <td align="center"><b>Vegetable Name</b> &nbsp;&nbsp;&nbsp;</td>
+    <td align="center"><b>Description</b> &nbsp;&nbsp;&nbsp;</td>
+    <td align="center"><b>Category</b> &nbsp;&nbsp;&nbsp;</td>
+    <td align="center"><b>Image</b> &nbsp;&nbsp;&nbsp;</td>
+    <th> </th>
+  </tr>
+    {% for row in data  %}
+  <tr>
+
+
+{#  <img src="../static/image/{{ row['image'] }}">#}
+    <td align="center">{{ loop.index }} &nbsp;&nbsp;&nbsp;</td>
+    <td align="center"><b> {{ row['VegName'] }} </b>&nbsp;&nbsp;&nbsp;</td>
+    <td align="center">{{ row['Description'] }} &nbsp;&nbsp;&nbsp;</td>
+    <td align="center">{{ row['Category'] }} &nbsp;&nbsp;&nbsp;</td>
+{#      C:\Users\ToShibA\PycharmProjects\Recipe\static\image#}
+       <td align="center">
+           <img src="../static/image/{{ row['Image'] }}" height="100" width="100" />&nbsp;&nbsp;&nbsp;
+       </td>
+      <td align="center"><a href="/manage_veg_edit?id={{ row['VegID'] }}">Edit</a><br /><a href="/manage_veg_delete?id={{ row['VegID'] }}">Delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+{% endblock %}

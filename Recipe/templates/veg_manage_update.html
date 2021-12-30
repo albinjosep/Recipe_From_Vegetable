@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="" method="get" enctype="multipart/form-data">
+<table width="278" border="1">
+  <tr>
+    <td width="111">Username</td>
+    <td width="151"><label for="textfield"></label>
+      <input class="form-control" type="text" name="textfield" id="textfield" required="required"/></td>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="45" rows="5" required="required"></textarea></td>
+  </tr>
+  <tr>
+  <td>category</td>
+  <td><label for="select"></label>
+    <select name="select" id="select">
+    </select></td>
+  <tr>
+  <tr>
+    <td>Image</td>
+    <td><label for="fileField"></label>
+      <input class="form-control" type="file" name="fileField" id="fileField" /></td>
+  </tr>
+
+    <td colspan="2" align="center"><input type="submit" name="add" id="add" value="Update" /></td>
+    </tr>
+</table>
+
+</form>
+{% endblock %}

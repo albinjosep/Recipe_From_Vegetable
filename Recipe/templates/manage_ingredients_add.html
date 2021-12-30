@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="/manage_ingredients_add1" method="post">
+<table>
+  <tr>
+    <th width="140">Recipe</th>
+    <td>
+        <select name="select" id="select" class="form-control">
+        <option>--select--</option>
+            {% for row in data1 %}
+            <option value="{{ row['RecipeID'] }}"> {{ row['RecipeName'] }} </option>
+            {% endfor %}
+        </select>
+    </td>
+  </tr>
+
+     <tr>
+    <th width="140">Vegetable</th>
+    <td>
+        <select name="select1" id="select1" class="form-control">
+        <option>--select--</option>
+            {% for row1 in data %}
+            <option value="{{ row1['VegID'] }}"> {{ row1['VegName'] }} </option>
+            {% endfor %}
+        </select>
+    </td>
+  </tr>
+
+  <tr>
+    <th>Quantity</th>
+    <td><label for="textfield"></label>
+      <input class="form-control" type="text" name="textfield2" id="textfield2" required="required" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><div align="center">
+      <input type="submit" name="button" id="button" value="Add" class="btn btn-primary" />
+    </div></td>
+    </tr>
+</table>
+</form>
+{% endblock %}

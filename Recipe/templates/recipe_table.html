@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="" method="get">
+<table width="400" border="1">
+  <tr>
+    <th>#</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+    {% for row in data %}
+  <tr>
+    <td>&nbsp;{{ loop.index }}</td>
+    <td><img src="../static/image/{{ row['image'] }}" height="100" width="100"> </td>
+    <td>{{ row['RecipeName'] }}</td>
+    <td>&nbsp;{{ row['Description'] }}</td>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="/manage_veg_add1" method="post" enctype="multipart/form-data">
+<table border="0">
+  <tr>
+    <th width="111">Vegetable Name</th>
+    <td width="151"><label for="textfield"></label>
+      <input class="form-control" type="text" name="textfield" id="textfield" /></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><label for="textarea"></label>
+      <textarea class="form-control" name="textarea" id="textarea" cols="45" rows="5" required="required"></textarea></td>
+  </tr>
+  <tr>
+  <th>category</th>
+  <td><label for="select"></label>
+    <select class="form-control" name="select" id="select">
+        <option>--select--</option>
+        <option>Leafy</option>
+         <option>Marrow</option>
+         <option>Edible</option>
+        <option>Allium</option>
+
+    </select></td>
+  <tr>
+  <tr>
+    <th>Image</th>
+    <td><label for="fileField"></label>
+      <input class="form-control" type="file" name="fileField" id="fileField" required="required"/></td>
+  </tr>
+
+    <td colspan="2" align="center"><input type="submit" name="add" id="add" value="ADD" class="btn btn-primary"  /></td>
+    </tr>
+</table>
+
+</form>
+{% endblock %}

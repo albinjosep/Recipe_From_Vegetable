@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block body %}
+<form action="" method="post" enctype="multipart/form-data">
+<table width="200" class="table table-stripped">
+  <tr>
+    <th>#</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+    {% for row in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td><img src="../static/recipe/{{ row['Image'] }}" height="100" width="100" ></td>
+    <td>{{ row['RecipeName'] }}</td>
+    <td>{{ row['Description'] }}</td>
+      <td><a href="/manage_recipe_edit?id={{ row['RecipeID'] }}">Edit</a><br><a href="/manage_recipe_delete?id={{ row['RecipeID'] }}">Delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+{% endblock %}
