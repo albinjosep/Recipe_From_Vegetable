@@ -1,2 +1,4 @@
-# Recipe_From_Vegetable
-ml model
+This paper describes an on-going project that aims to develop a vegetable detection system based on computer vision to easily identify the vegetables. It is based on image processing, which can control the classification, qualification and segmentation of images and hence recognize the vegetable. The aim of the system to be designed is a vegetable identification system, which consists of three stages: capturing an image of all the vegetables placed together, feature extraction, and vegetable recognition. Usually from the captured images multiple recognition clues such as colour, shape, size, and texture are extracted and analyzed to classify and recognize the vegetables. After the matching of the vegetables has taken place successfully, we aim to implement a system which can suggest optimal recipes based on the identified vegetables. 
+
+Keywords: Vegetable Detection; Computer Vision; Feature Extractio.
+
